@@ -11,11 +11,16 @@ body {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 span {
   position: relative;
   z-index: 10;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
