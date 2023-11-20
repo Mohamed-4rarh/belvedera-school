@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Hero from '@/containers/home/Hero'
 import History from '@/containers/home/History'
 import Life from '@/containers/home/Life'
+import JoinUs from '@/containers/home/JoinUs'
 
 export default function Home() {
   return(
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <History />
       <Life />
+      <JoinUs />
     </>
   )
 }

@@ -14,6 +14,7 @@ export default function Life() {
                     <br />
                     We believe the ability to develop critical thinking skills and thinking flexibility, is vital.
                 </p>
+                {/* customized button */}
             </div>
             <div className='life__image'>
                 <Image 

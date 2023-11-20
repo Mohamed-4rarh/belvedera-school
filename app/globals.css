@@ -13,6 +13,11 @@ ul {
   list-style: none;
 }
 
+span {
+  position: relative;
+  z-index: 10;
+}
+
 .container {
   max-width: 1440px;
   margin-left: auto;
