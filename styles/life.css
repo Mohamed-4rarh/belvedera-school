@@ -1,0 +1,51 @@
+/* life section container in home page */
+
+.life__section {
+    position: relative;
+    margin-bottom: 170px;
+}
+
+.life__section::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 32.5%;
+    background-color: #6AC45B;
+    z-index: -1;
+}
+
+.life__section .container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+
+}
+
+.life__content span {
+    font-size: 16px;
+    line-height: 22px;
+    color: #0F213F;
+}
+
+.life__content h2 {
+    font-size: 40px;
+    color: #0F213F;
+    font-weight: bold;
+    line-height: 43px;
+}
+
+.life__content p {
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 800px;
+    color: #0F213F;
+}
+
+.life__image {
+    position: relative;
+    width: 700px;
+    height: 700px;
+}

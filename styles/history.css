@@ -22,10 +22,6 @@
     align-items: center;
 }
 
-.history__section .history__content::before {
-
-}
-
 .history__section .history__content span {
     font-size: 16px;
     color: #2B52AA;
