@@ -44,7 +44,7 @@ export const NavbarLinks = [
             {
                 id: 322,
                 title: 'a early foundation stage',
-                path: '/life-and-learning/early-foundation '
+                path: '/life-and-learning/early-foundation'
             },
             {
                 id: 422,
@@ -54,7 +54,7 @@ export const NavbarLinks = [
             {
                 id: 522,
                 title: 'secondary school',
-                path: 'secondary-school'
+                path: '/life-and-learning/secondary-school'
             },
             {
                 id: 622,
@@ -96,8 +96,19 @@ export const NavbarLinks = [
     {
         id: 3,
         title: 'admission',
-        path: '/admission',
-        // admissions: []
+        path: '/admission/admission-process',
+        subList: [
+            {
+                id: 311,
+                title: 'apply now',
+                path: '/'
+            },
+            {
+                id: 322,
+                title: 'admission process',
+                path: '/admission/admission-process'
+            }
+        ]
     },
     {
         id: 4,
