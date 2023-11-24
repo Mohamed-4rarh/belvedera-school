@@ -9,7 +9,7 @@ export default function Footer() {
       <div className='container'>
         <div className='footer__container'>
           <div className='footer__one'>
-            <h3>Hot Links</h3>
+            <h3>Quick Links</h3>
             <div className='holder'>
               <ul>
                 <li><Link href={'/'}>About Us</Link></li>
@@ -27,18 +27,26 @@ export default function Footer() {
           </div>
 
           <div className='footer__two'>
-            <h3>Find Us</h3>
+            <h3>Contact Us</h3>
             <p>If you would like to speak to somebody in person about your child’s application, contact us on any of the following:</p>
-            <div className='holder'>
-              <span>ADDRESS</span>
-              <p>cairo-SuezRoad,AcrossMadinaty&SARAI,Cairo,Egypt.</p>
+            <div className='holder holderC'>
+              <span>ADMISSION OFFICE:</span>
+              <p>SODIC Eastown, Beside the AUC, Road 90, New Cairo - Gate 9 - Building 4, 4th Floor, Office 04-04-10.</p>
+            </div>
+            <div className='holder holderC'>
+              <span>CAMPUS ADDRESS:</span>
+              <p>CAIRO-SUEZ ROAD, OPPOSITE TO MADINATY & SARAI, CAIRO, EGYPT.</p>
             </div>
             <div className='holder'>
-              <span>PHONE</span>
-              <p>+20 10 70000 353</p>
+              <span>ADMISSIONS:</span>
+              <p>+20 107 0549 003 - +20 107 0549 004</p>
             </div>
             <div className='holder'>
-              <span>EMAIL</span>
+              <span>FRONTDESK:</span>
+              <p>+20 107 0000 353</p>
+            </div>
+            <div className='holder'>
+              <span>EMAIL:</span>
               <p>enquiries@belvedereschoolcairo.com</p>
             </div>
           </div>

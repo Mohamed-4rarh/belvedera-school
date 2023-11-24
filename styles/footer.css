@@ -11,12 +11,12 @@
 }
 
 .footer__section h3 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
 .footer__section a {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     color: #0F213F;
@@ -36,7 +36,10 @@
     display: flex;
     align-items: center; 
     gap: 15px;
-    margin: 10px 0;
+}
+
+.footer__two .holderC {
+    display: block;
 }
 
 .footer__one .holder ul li {
@@ -45,7 +48,7 @@
 
 .footer__two .holder span {
     width: 90px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 21px;
     color: #0F213F;
@@ -53,11 +56,13 @@
 
 .footer__two .holder p {
     margin: 0;
+    font-size: 13px;
+    max-width: 450px;
 }
 
 .footer__two > p {
     max-width: 600px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .footer__three {
