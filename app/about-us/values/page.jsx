@@ -1,7 +1,16 @@
+import CustomHero from '@/components/CustomHero'
+import { aboutUsPages } from '@/sanity/lib/fetcher'
 import React from 'react'
 
-export default function page() {
+export default async function page() {
+  const valuesPage = await aboutUsPages('values-and-ethos')
   return (
-    <div>about-us/values</div>
+    <>
+      <CustomHero 
+        img={valuesPage.mainImage} 
+        title={valuesPage.title} 
+        color={valuesPage.color} 
+      />
+    </>
   )
 }

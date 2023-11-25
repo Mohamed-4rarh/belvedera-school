@@ -1,7 +1,16 @@
+import CustomHero from '@/components/CustomHero'
+import { aboutUsPages } from '@/sanity/lib/fetcher'
 import React from 'react'
 
-export default function page() {
+export default async function page() {
+  const historyPage = await aboutUsPages('our-history')
   return (
-    <div>about-us/history</div>
+    <>
+      <CustomHero
+        img={historyPage.mainImage}
+        title={historyPage.title}
+        color={historyPage.color}
+      />
+    </>
   )
 }
