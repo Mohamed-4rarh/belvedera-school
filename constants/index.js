@@ -17,7 +17,7 @@ export const NavbarLinks = [
             {
                 id: 311,
                 title: "vision & mission",
-                path: '/about-us/vission'
+                path: '/about-us/vision'
             },
             {
                 id: 411,

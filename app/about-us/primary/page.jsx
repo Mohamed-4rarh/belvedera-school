@@ -1,7 +1,12 @@
+import CustomHero from '@/components/CustomHero'
+import { aboutUsPages } from '@/sanity/lib/fetcher'
 import React from 'react'
 
-export default function page() {
+export default async function page() {
+  const primaryPage = await aboutUsPages('aboutUs__primary')
   return (
-    <div>about-us/primary</div>
+    <>
+      <CustomHero />
+    </>
   )
 }

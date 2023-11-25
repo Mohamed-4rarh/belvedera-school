@@ -28,3 +28,80 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+.custom-hero {
+  margin-top: 95px;
+}
+
+.custom-hero-container {
+  position: relative;
+}
+
+.custom-hero-image {
+  height: 500px;
+  width: 100%;
+}
+
+.custom-hero-image .custom-hero-img {
+  object-fit: cover;
+  position: relative;
+}
+
+.custom-hero-title {
+  position: absolute;
+  display: flex;
+  color: #F5F7F9;
+  font-size: 40px;
+  z-index: 10;
+  bottom: -20px;
+  left: 20px;
+  width: 350px;
+  height: 80px;
+  margin: 0;
+  padding: 20px;
+  align-items: flex-end;
+  line-height: 32px;
+}
+
+.page-card {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  background-color: #F5F7F9;
+  width: fit-content;
+  margin-bottom: 80px;
+}
+
+.page-card-image {
+  position: relative;
+  width: 404px;
+  height: 448px;
+}
+
+.page-card-image-img {
+  top: -15px !important;
+  left: 15px !important;
+  object-fit: cover !important;
+  filter: grayscale(0.5);
+}
+
+.page-card-content {
+  padding-right: 85px;
+}
+
+.page-card-content h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.page-card-content p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #0F213F;
+  max-width: 480px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
