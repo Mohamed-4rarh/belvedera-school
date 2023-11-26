@@ -8,8 +8,8 @@ export async function aboutUs() {
             groq`
                 *[_type == 'aboutUs'][0] {
                     "mainImage": mainImage.asset->url,
-                    title,
                     color,
+                    title,
                     subHeader,
                     header,
                     writer,
@@ -34,6 +34,7 @@ export async function aboutUsPages(slug) {
                         path,
                         title,
                         color,
+                        subHeader,
                         header,
                         text,
                         vision,
@@ -51,8 +52,8 @@ export async function aboutUsPages(slug) {
                     "bodyImage": bodyImage.asset->url,
                     slug,
                     path,
-                    title,
                     color,
+                    title,
                     header,
                     text,
                     vision,

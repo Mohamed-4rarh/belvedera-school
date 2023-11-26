@@ -1,0 +1,20 @@
+.values__container {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.values__content h2 {
+    max-width: 640px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.values__content .values-beliefs {
+    margin-top: 50px;
+    font-weight: bold;
+}

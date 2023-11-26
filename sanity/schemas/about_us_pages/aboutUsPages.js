@@ -37,6 +37,11 @@ export const aboutPages = {
             type: 'string'
         },
         {
+            name: 'subHeader',
+            title: 'Sub Header',
+            type: 'string'
+        },
+        {
             name: 'header',
             title: 'Header',
             type: 'string'
