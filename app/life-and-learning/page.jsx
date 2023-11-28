@@ -1,7 +1,12 @@
+import CustomHero from '@/components/CustomHero'
 import React from 'react'
 
-export default function page() {
+export default async function page() {
+  // const lifeAndLearningPage = await 
+  // const lifeAndLearningPages = await 
   return (
-    <div>LIFE-AND-LEARNING</div>
+    <>
+      
+    </>
   )
 }

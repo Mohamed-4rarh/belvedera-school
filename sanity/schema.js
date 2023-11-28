@@ -4,7 +4,8 @@ import {post} from './schemas/post'
 import {author} from './schemas/author'
 import { aboutPages } from './schemas/about_us_pages/aboutUsPages'
 import { aboutUsPage } from './schemas/about_us_pages/aboutUs'
+import { mainPages } from './schemas/mainPages'
 
 export const schema = {
-  types: [post, author, category, blockContent,aboutUsPage, aboutPages],
+  types: [post, author, category, blockContent,aboutUsPage, aboutPages, mainPages],
 }
