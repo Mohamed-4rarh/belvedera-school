@@ -8,7 +8,6 @@ import LifeAndLearningRightList from '@/components/LifeAndLearningRightList'
 export default async function page() {
   const pageData = await getMainPage('life-and-learning')
   const nestedPages = await getInnerPagesCards('mainPages', 'life_and_learning')
-  console.log(pageData)
   return (
     <>
       <CustomHero
