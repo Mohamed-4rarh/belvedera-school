@@ -2,6 +2,8 @@ import CustomHero from '@/components/CustomHero'
 import PagesCards from '@/containers/PagesCards'
 import { getInnerPagesCards, getMainPage } from '@/sanity/lib/fetcher'
 import React from 'react'
+import '@/styles/life & learning/lifeAndLearning.css'
+import LifeAndLearningRightList from '@/components/LifeAndLearningRightList'
 
 export default async function page() {
   const pageData = await getMainPage('life-and-learning')
@@ -14,10 +16,11 @@ export default async function page() {
         title={pageData.title}
         color={pageData.color}
       />
-      <div>
+      <div className='section__container container'>
         <div className="container">
           <p className='pages__body__paragraph'>{pageData.text}</p>
         </div>
+        <LifeAndLearningRightList />
       </div>
       <PagesCards pages={nestedPages} />
     </>

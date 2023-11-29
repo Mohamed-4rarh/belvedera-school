@@ -33,6 +33,12 @@ a {
   margin-top: 95px;
 }
 
+.page__header {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 50px;
+}
+
 .custom-hero-container {
   position: relative;
 }
@@ -61,6 +67,13 @@ a {
   padding: 20px;
   align-items: flex-end;
   line-height: 32px;
+}
+
+.section__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 100px;
 }
 
 .pages__cards-container {
@@ -132,7 +145,7 @@ a {
 }
 
 .explore__list {
-  padding: 30px 80px;
+  padding: 30px 50px;
   background-color: #F5F7F9;
   height: fit-content;
 }

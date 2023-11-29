@@ -68,7 +68,7 @@ export async function getInnerPagesCards(schemaType, partOf) {
         try {
             return client.fetch(
                 groq`
-                    *[_type == '${schemaType}' && partOf == $partOf] | order(_createdAt) {
+                    *[_type == '${schemaType}' && partOf == $partOf] | order(_createdAt asc) {
                         "mainImage": mainImage.asset->url,
                         title,
                         text,
