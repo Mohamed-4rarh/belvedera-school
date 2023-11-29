@@ -12,9 +12,50 @@
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 50px;
+    line-height: 45px;
 }
 
 .values__content .values-beliefs {
     margin-top: 50px;
     font-weight: bold;
+}
+
+.values__content .values__image {
+    position: relative;
+    width: 997px;
+    height: 473px;
+    margin-top: 100px;
+    margin-bottom: 85px;
+}
+
+.values__content .values__squares {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 6rem;
+}
+
+.values__content .values-square {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.values__content .values-square:first-of-type {
+    background-color: #FFCB47;
+}
+
+.values__content .values-square:nth-child(2) {
+    background-color: #FF9BC2;
+}
+.values__content .values-square:nth-child(3) {
+    background-color: #8BCCCF;
+}
+.values__content .values-square:nth-child(4) {
+    background-color: #041E42;
 }

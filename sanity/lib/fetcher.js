@@ -26,6 +26,40 @@ export async function getMainPage(slug) {
         } catch (error) {
             console.log(`DATA_FETCHING_ERROR: ${error}`)
         }
+    } else {
+        console.log('MISSING_SLUG_PROVIDER')
+    }
+}
+
+export async function getInnerPage(slug) {
+    if(slug) {
+        try {
+            return client.fetch(
+                groq`
+                    *[_type == 'innerPages' && slug.current == $slug][0] {
+                        "mainImage": mainImage.asset->url,
+                        title,
+                        slug,
+                        subHeader,
+                        header,
+                        color,
+                        secondaryColor,
+                        text,
+                        subject,
+                        subjectText,
+                        "bodyImage": bodyImage.asset->url
+                    }
+                `, {
+                    slug
+                }, {
+                    cache: 'no-store'
+                }
+            )
+        } catch (error) {
+            console.log(`DATA_FETCHING_ERROR: ${error}`)
+        }
+    } else {
+        console.log('MISSING_SLUG_PROVIDER')
     }
 }
 

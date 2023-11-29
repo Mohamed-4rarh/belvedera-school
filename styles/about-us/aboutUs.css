@@ -26,14 +26,7 @@
     color: #2B52AA;
 }
 
-.about__content-content > p,
-.about__content-content .about__letter {
-    font-weight: 400;
-    font-size: 14px;
-    color: #0F213F;
-    max-width: 997px;
-    line-height: 30px;
-}
+
 
 .about__letter {
     margin-top: 50px;
