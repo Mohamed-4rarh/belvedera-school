@@ -28,6 +28,16 @@ export const mainPages = {
             }
         },
         {
+            name: 'path',
+            title: 'Path',
+            type: 'string'
+        },
+        {
+            name: 'partOf',
+            title: 'Part Of',
+            type: 'string'
+        },
+        {
             name: 'subHeader',
             title: 'SubHeader',
             type: 'string'

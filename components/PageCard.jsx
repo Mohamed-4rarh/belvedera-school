@@ -2,12 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export default function PageCard({pageData}) {
+export default function PageCard({img, title, text, path, color}) {
   return (
     <div className='page-card'>
         <div className='page-card-image'>
             <Image
-                src={pageData.mainImage}
+                src={img}
                 fill
                 unoptimized
                 className='page-card-image-img'
@@ -15,10 +15,10 @@ export default function PageCard({pageData}) {
         </div>
         <div className='page-card-content'>
             <h2
-              style={{color: pageData.color}}
-            >{pageData.title}</h2>
-            <p>{pageData.text}</p>
-            <Link href={pageData.path}>Learn More</Link>
+              style={{color: color}}
+            >{title}</h2>
+            <p>{text}</p>
+            <Link href={path || '/'}>Learn More</Link>
         </div>
     </div>
   )

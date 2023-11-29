@@ -22,6 +22,16 @@ export const innerPages = {
             }
         },
         {
+            name: 'partOf',
+            title: 'Part Of',
+            type: 'string'
+        },
+        {
+            name: 'path',
+            title: 'Path',
+            type: 'string'
+        },
+        {
             name: 'subHeader',
             title: 'SubHeader',
             type: 'string'

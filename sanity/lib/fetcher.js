@@ -63,68 +63,30 @@ export async function getInnerPage(slug) {
     }
 }
 
-export async function aboutUs() {
-    try {
-        return client.fetch(
-            groq`
-                *[_type == 'aboutUs'][0] {
-                    "mainImage": mainImage.asset->url,
-                    color,
-                    title,
-                    subHeader,
-                    header,
-                    writer,
-                    text,
-                }
-            `
-        )
-    } catch (error) {
-        console.log(error)
-    }
-}
-//get about_us nested pages
-export async function aboutUsPages(slug) {
-    try {
-        if(slug) {
+export async function getInnerPagesCards(schemaType, partOf) {
+    if(partOf && schemaType) {
+        try {
             return client.fetch(
                 groq`
-                    *[_type == 'aboutUsPage' && slug.current == $slug][0] {
+                    *[_type == '${schemaType}' && partOf == $partOf] | order(_createdAt) {
                         "mainImage": mainImage.asset->url,
-                        "bodyImage": bodyImage.asset->url,
-                        slug,
-                        path,
                         title,
-                        color,
-                        subHeader,
-                        header,
                         text,
-                        vision,
-                        mission,
-                        beliefs
+                        color,
+                        partOf,
+                        path,
+                        _createdAt
                     }
-                `,{slug},
-                {cache: 'no-store'}
-            )
-        }
-        return client.fetch(
-            groq`
-                *[_type == 'aboutUsPage'] {
-                    "mainImage": mainImage.asset->url,
-                    "bodyImage": bodyImage.asset->url,
-                    slug,
-                    path,
-                    color,
-                    title,
-                    header,
-                    text,
-                    vision,
-                    mission,
-                    beliefs
+                `, {
+                    partOf
+                }, {
+                    cache: 'no-store'
                 }
-            `,{},
-            {cache: 'no-store'}
-        )
-    } catch (error) {
-        console.log(error)
+            )
+        } catch (error) {
+            console.log(`DATA_FETCHING_ERROR: ${error}`)
+        }
+    } else {
+        console.log('MISSING_PARTOF_PROVIDER')
     }
 }

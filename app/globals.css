@@ -63,6 +63,11 @@ a {
   line-height: 32px;
 }
 
+.pages__cards-container {
+  margin-top: 85px;
+  margin-bottom: 85px;
+}
+
 .page-card {
   display: flex;
   gap: 50px;

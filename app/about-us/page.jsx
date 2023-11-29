@@ -1,13 +1,15 @@
 import React from 'react'
 import CustomHero from '@/components/CustomHero'
 import PageCard from '@/components/PageCard'
-import { getMainPage } from '@/sanity/lib/fetcher'
+import { getInnerPagesCards, getMainPage } from '@/sanity/lib/fetcher'
 import '@/styles/about-us/aboutUs.css'
 import AboutRightList from '@/components/AboutRightList'
 import { textSpliter } from '@/constants'
+import PagesCards from '@/containers/PagesCards'
 
 export default async function page() {
   const pageData = await getMainPage('about-us')
+  const nestedPages = await getInnerPagesCards('innerPages', 'about_us')
   return (
     <>
       <CustomHero 
@@ -27,13 +29,7 @@ export default async function page() {
         </div>
         <AboutRightList />
       </div>
-      {/* <div className='about__cards__section container'>
-        {
-          aboutPages?.map((pageData) => (
-            <PageCard pageData={pageData} key={pageData.slug.current} />
-          ))
-        }
-      </div> */}
+      <PagesCards pages={nestedPages} />
     </>
   )
 }
