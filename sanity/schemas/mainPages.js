@@ -1,8 +1,8 @@
 // this schema will handle the mainPages(pages includes pages) that is commonly in design like:
-//  -About Us Page
-//  -Life And Learning
-//  -A Broad Curricular
-//  -Extra Curricula Activities
+//  -About Us Page => slug == 'about-us'
+//  -Life And Learning => slug == 'life-and-learning'
+//  -A Broad Curricular => slug == 'a-broad-curriculum'
+//  -Extra Curricula Activities => slug == 'extra-curricula-activities'
 
 export const mainPages = {
     name: 'mainPages',
@@ -18,6 +18,14 @@ export const mainPages = {
             name: 'title',
             title: 'Title',
             type: 'string'
+        },
+        {
+            name: 'slug',
+            title: 'slug',
+            type: 'slug',
+            options: {
+                source: 'title'
+            }
         },
         {
             name: 'subHeader',

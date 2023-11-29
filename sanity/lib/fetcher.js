@@ -1,6 +1,33 @@
 import { groq } from "next-sanity";
 import { client } from "./client";
 
+export async function getMainPage(slug) {
+    if(slug) {
+        try {
+            return client.fetch(
+                groq`
+                    *[_type == 'mainPages' && slug.current == $slug][0]{
+                        "mainImage": mainImage.asset->url,
+                        title,
+                        slug,
+                        subHeader,
+                        header,
+                        color,
+                        secondaryColor,
+                        text,
+                        "bodyImage": bodyImage.asset->url
+                    }
+                `, {
+                    slug
+                }, {
+                    cache: 'no-store'
+                }
+            )
+        } catch (error) {
+            console.log(`DATA_FETCHING_ERROR: ${error}`)
+        }
+    }
+}
 
 export async function aboutUs() {
     try {

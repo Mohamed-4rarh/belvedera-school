@@ -1,3 +1,10 @@
+export function textSpliter(text) {
+    const splitedText = text.split('*')
+    splitedText.filter(item => item.trim() !== '')
+
+    return splitedText;
+}
+
 export const NavbarLinks = [
     {
         id: 1,
