@@ -1,41 +1,40 @@
-import Image from 'next/image'
-import React from 'react'
 import { NavbarLinks } from '@/constants'
+import Image from 'next/image'
 import Link from 'next/link'
+import React from 'react'
 import '@/styles/navbar.css'
 
 export default function Navbar() {
   return (
-    <header className='header'>
-        <div className='navbar__container'>
-            <nav className='navbar'>
-                <Image 
-                    src={'/logo.svg'}
-                    width={208}
-                    height={53}
-                    className='navbar__logo'
-                />
-                <ul className='navbar__list'>
+    <header>
+        <div className='container header__container'>
+            <nav className='nav'>
+                <Link href={'/'} style={{zIndex: 1}}>
+                    <Image src={'/logo.svg'} width={205} height={50} unoptimized/>
+                </Link>
+
+                <ul className='nav__list'>
                     {
                         NavbarLinks.map((link) => (
-                            <li key={link.id} className='navbar__list-item'>
+                            <li key={link.id} className='nav__list-item'>
                                 <Link href={link.path}>{link.title}</Link>
-                                <div className='navbar__list-item__container'>
-                                    <ul className='navbar__list-item__container-subtitle'>
+                                <div className='sublists__container'>
+                                    <ul className='nav__list-item__subList'>
                                         {
-                                            link.subList?.slice(0, 6).map((item) => (
-                                                <li key={item.id} className='subtitle__item'><Link href={item.path}>{item.title}</Link></li>
+                                            link.subList.slice(0, 6).map((subLink) => (
+                                                <li key={subLink.id} className='subList-item'><Link href={subLink.path}>{subLink.title}</Link></li>
                                             ))
                                         }
                                     </ul>
-                                    <ul className='navbar__list-item__container-subtitle'>
+                                    <ul className='nav__list-item__subList'>
                                         {
-                                            link.subList?.slice(6, 12).map((item) => (
-                                                <li key={item.id} className='subtitle__item'><Link href={item.path}>{item.title}</Link></li>
+                                            link.subList.slice(6, 12).map((subLink) => (
+                                                <li key={subLink.id} className='subList-item'><Link href={subLink.path}>{subLink.title}</Link></li>
                                             ))
                                         }
                                     </ul>
                                 </div>
+                                
                             </li>
                         ))
                     }
