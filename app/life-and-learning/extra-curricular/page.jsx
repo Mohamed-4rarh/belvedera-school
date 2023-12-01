@@ -24,10 +24,11 @@ export default async function page() {
             <span style={{color: pageData.color}}>{pageData.header}</span>
           </h2>
           <p className='pages__body__paragraph'>{pageData.text}</p>
+          <PagesCards pages={nestedPages} />
         </div>
         <LifeAndLearningRightList />
       </div>
-      <PagesCards pages={nestedPages} />
+      
       <BodyImage
         img={pageData.bodyImage}
       />

@@ -71,7 +71,7 @@ export const NavbarLinks = [
             {
                 id: 722,
                 title: 'extra currcular activities',
-                path: '/life-and-learning/extra-currcular'
+                path: '/life-and-learning/extra-curricular'
             },
             {
                 id: 822,

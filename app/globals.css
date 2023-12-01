@@ -130,6 +130,7 @@ a {
   color: #0F213F;
   max-width: 997px;
   line-height: 30px;
+  margin: 25px 0;
 }
 
 .body__image {
@@ -158,10 +159,17 @@ a {
 }
 
 .explore__list-container ul {
-  padding-left: 35px;
+  padding-left: 25px;
   font-size: 14px;
+}
+
+.explore__list-container a {
+  font-size: 14px;
+  color: black;
+  transition: 0.3s;
 }
 
 .explore__list-container a:hover {
   text-decoration: underline;
+  color: #2B52AA;
 }
