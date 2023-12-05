@@ -124,6 +124,15 @@ a {
   -webkit-line-clamp: 4;
 }
 
+.body__paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  color: #0F213F;
+  max-width: 997px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+
 .pages__body__paragraph {
   font-weight: 400;
   font-size: 16px;
@@ -133,6 +142,7 @@ a {
   margin: 25px 0;
 }
 
+/* body pages image */
 .body__image {
   position: relative;
   width: 100%;
@@ -145,6 +155,8 @@ a {
   object-fit: cover;
 }
 
+
+/* explore list */
 .explore__list {
   padding: 30px 50px;
   background-color: #F5F7F9;
